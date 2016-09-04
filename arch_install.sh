@@ -26,7 +26,27 @@ mount /dev/sda1 /mnt/boot/efi
 
 # Install the system
 # Including some wifi stuff, xorg, wm and more
-pacstrap /mnt base base-devel grub-efi-x86_64 efibootmgr dialog wpa_supplicant xorg xorg-xinit i3 i3lock i3status dmenu bash-completion openssh nano git terminator xterm leafpad chromium thunar thunar-volman
+pacstrap /mnt base \
+ base-devel \
+ grub-efi-x86_64 \
+ efibootmgr \
+ dialog \
+ wpa_supplicant \
+ xorg xorg-xinit \
+ i3 \
+ i3lock \
+ i3status \
+ dmenu \
+ bash-completion \
+ openssh \
+ nano \
+ git \
+ terminator \
+ xterm \
+ leafpad \
+ chromium \
+ thunar \
+ thunar-volman
 
 # Setup fstab
 genfstab -pU /mnt >> /mnt/etc/fstab
