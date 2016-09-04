@@ -1,0 +1,46 @@
+general {
+  interval = 1
+}
+
+order += "disk /"
+order += "wireless wlp10s0"
+order += "ethernet enp0s25"
+order += "battery 0"
+order += "volume master"
+order += "load"
+order += "time"
+
+disk "/" {
+  format = "%free"
+}
+
+wireless wlp10s0 {
+  format_up = "W: (%quality at %essid) %ip"
+  format_down = "W: down"
+}
+
+ethernet enp0s25 {
+  # sudo setcap cap_net_admin=ep $(which i3status)
+  format_up = "E: %ip (%speed)"
+  format_down = "E: down"
+}
+
+battery 0 {
+  format = "%status %percentage %remaining"
+  path = "/sys/class/power_supply/CMB1/uevent"
+}
+
+load {
+  format = "%1min"
+}
+
+volume master {
+  format = "♪: %volume"
+  device = "default"
+  mixer = "Master"
+  mixer_idx = 0
+}
+
+time {
+  format = "%Y-%m-%d %H:%M:%S"
+}
