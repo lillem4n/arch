@@ -46,7 +46,10 @@ pacstrap /mnt base \
  leafpad \
  chromium \
  thunar \
- thunar-volman
+ thunar-volman \
+ atom \
+ pulseaudio \
+ pulseaudio-alsa
 
 # Setup fstab
 genfstab -pU /mnt >> /mnt/etc/fstab
