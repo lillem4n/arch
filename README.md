@@ -1,4 +1,4 @@
-# Arch install
+# Arch + i3 install
 
 This repo contains basic instructions and shortcut scripts to install and configure Arch Linux and i3 for my personal needs. They should with small tweaks be able to be used by anyone.
 
