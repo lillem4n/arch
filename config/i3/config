@@ -154,3 +154,6 @@ for_window [class="Terminator" instance="dropdown"] floating enable move absolut
 bar {
         status_command i3status
 }
+
+# Start nm-applet
+exec --no-startup-id nm-applet
