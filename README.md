@@ -6,8 +6,9 @@ This repo contains basic instructions and shortcut scripts to install and config
 
 1)  boot from arch linux live media  
 2)  setup network (use wifi-menu if only wifi is available)  
-3) partition disk
-3) download and run install scripts:  
+3) Run "loadkeys sv-latin1" if Swedish keyboard is wanted  
+4) partition disk  
+5) download and run install scripts:  
 
 ```bash
 wget https://raw.githubusercontent.com/lillem4n/arch/master/arch_install.sh;
