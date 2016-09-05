@@ -12,6 +12,9 @@ hwclock --systohc --utc
 # Add sudo group
 groupadd sudo
 
+# Add sudo group to sudoers file
+echo "%sudo ALL=(ALL) ALL" >> /etc/sudoers
+
 # Add real user
 useradd -m -g users -G sudo lilleman
 
@@ -52,4 +55,3 @@ echo "EndSection" >> /etc/X11/xorg.conf.d/10-keyboard.conf
 
 # Exit chroot env
 exit
-
