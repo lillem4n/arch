@@ -51,7 +51,8 @@ pacstrap /mnt base \
  pulseaudio \
  pulseaudio-alsa \
  networkmanager \
- networkmanager-openvpn
+ networkmanager-openvpn \
+ network-manager-applet
 
 # Setup fstab
 genfstab -pU /mnt >> /mnt/etc/fstab
