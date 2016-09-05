@@ -42,6 +42,14 @@ echo "exec i3" > /home/lilleman/.xinitrc
 # Change .xinitrc ownership to our new user
 chown lilleman:users /home/lilleman/.xinitrc
 
+# Autostart i3 on login on first tty
+echo "if [ -z \"$DISPLAY\" ] && [ \"$(fgconsole)\" -eq 1 ]; then" >> /home/lilleman/.bash_profile
+echo "  exec startx" >> /home/lilleman/.bash_profile
+echo "fi" >> /home/lilleman/.bash_profile
+
+# Make sure bash profile is owned by the new user
+chown lilleman:users /home/lilleman/.bash_profile
+
 # Set Swedish keyboard layout in X11
 echo "Section \"InputClass\"" > /etc/X11/xorg.conf.d/10-keyboard.conf
 echo "	Identifier \"system-keyboard\"" >> /etc/X11/xorg.conf.d/10-keyboard.conf
