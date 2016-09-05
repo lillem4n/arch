@@ -48,7 +48,7 @@ echo "	Option \"XkbModel\" \"pc105\"" >> /etc/X11/xorg.conf.d/10-keyboard.conf
 echo "EndSection" >> /etc/X11/xorg.conf.d/10-keyboard.conf
 
 # Enable network manager to make nm-applet work
-systemctl enable NetworkManager
+#systemctl enable NetworkManager
 
 # Exit chroot env
 exit
