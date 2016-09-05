@@ -49,7 +49,9 @@ pacstrap /mnt base \
  thunar-volman \
  atom \
  pulseaudio \
- pulseaudio-alsa
+ pulseaudio-alsa \
+ firefox \
+ wget
 # networkmanager \
 # networkmanager-openvpn \
 # network-manager-applet
