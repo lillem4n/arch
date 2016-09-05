@@ -49,7 +49,9 @@ pacstrap /mnt base \
  thunar-volman \
  atom \
  pulseaudio \
- pulseaudio-alsa
+ pulseaudio-alsa \
+ networkmanager \
+ networkmanager-openvpn
 
 # Setup fstab
 genfstab -pU /mnt >> /mnt/etc/fstab
