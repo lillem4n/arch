@@ -63,5 +63,8 @@ echo "EndSection" >> /etc/X11/xorg.conf.d/10-keyboard.conf
 # Enable network manager to make nm-applet work
 #systemctl enable NetworkManager
 
+# Enable docker
+systemctl enable docker
+
 # Exit chroot env
 exit
