@@ -18,3 +18,4 @@ chmod +x arch_install.sh arch_install2.sh;
 ```
 
 6) Copy content of the folder "config" into ~/.config in your new installation
+7) Copy bash_profile to ~/.bash_profile
