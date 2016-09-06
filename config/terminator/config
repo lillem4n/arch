@@ -1,0 +1,22 @@
+[global_config]
+[keybindings]
+  hide_window = F1
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    foreground_color = "#00ff00"
+  [[dropdown]]
+    exit_action = restart
+    scrollback_lines = 10000
+    background_image = None
+    scroll_on_output = True
+    show_titlebar = False
+    foreground_color = "#00ff00"

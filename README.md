@@ -16,3 +16,5 @@ wget https://raw.githubusercontent.com/lillem4n/arch/master/arch_install2.sh;
 chmod +x arch_install.sh arch_install2.sh;
 ./arch_install.sh;
 ```
+
+6) Copy content of the folder "config" into ~/.config in your new installation
