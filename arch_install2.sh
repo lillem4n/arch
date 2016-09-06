@@ -16,7 +16,7 @@ groupadd sudo
 echo "%sudo ALL=(ALL) ALL" >> /etc/sudoers
 
 # Add real user
-useradd -m -g users -G sudo lilleman
+useradd -m -g users -G sudo,docker lilleman
 
 # Configure mkinitcpio with modules
 perl -pi -e 's/MODULES=""/MODULES="ext4"/g' /etc/mkinitcpio.conf

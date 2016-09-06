@@ -51,7 +51,8 @@ pacstrap /mnt base \
  pulseaudio \
  pulseaudio-alsa \
  firefox \
- wget
+ wget \
+ docker
 # networkmanager \
 # networkmanager-openvpn \
 # network-manager-applet
