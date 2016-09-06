@@ -43,7 +43,9 @@ echo "exec i3" > /home/lilleman/.xinitrc
 chown lilleman:users /home/lilleman/.xinitrc
 
 # Autostart i3 on login on first tty
-echo "if [ -z \"$DISPLAY\" ] && [ \"$(fgconsole)\" -eq 1 ]; then" >> /home/lilleman/.bash_profile
+echo "" >> /home/lilleman/.bash_profile
+echo "# Start X11 (i3) on login to tty1" >> /home/lilleman/.bash_profile
+echo "if [ -z \"\$DISPLAY\" ] && [ \"\$(fgconsole)\" -eq 1 ]; then" >> /home/lilleman/.bash_profile
 echo "  exec startx" >> /home/lilleman/.bash_profile
 echo "fi" >> /home/lilleman/.bash_profile
 
