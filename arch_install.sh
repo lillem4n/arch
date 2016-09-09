@@ -26,30 +26,25 @@ mount /dev/sda1 /mnt/boot/efi
 
 # Install the system
 # Including some wifi stuff, xorg, wm and more
-pacstrap /mnt base \
- base-devel \
- grub-efi-x86_64 \
- efibootmgr \
- dialog \
- wpa_supplicant \
- xorg xorg-xinit \
- i3 \
- i3lock \
- i3status \
- dmenu \
- bash-completion \
+pacstrap /mnt \
+ base base-devel \ # Base packages for Arch
+ grub-efi-x86_64 efibootmgr \ # UEFI stuff
+ dialog \ # Unknown
+ wpa_supplicant \ # Needed for wifi-menu to work with WPA wireless networks
+ xorg xorg-xinit \ # Xorg (X11)
+ i3 i3lock i3status \ # i3 Window Manager
+ dmenu \ # dmenu used to launch applications in i3
+ bash-completion \ # Autocompletion in bash, who can live without it?
  openssh \
- nano \
- git \
- terminator \
- xterm \
- leafpad \
+ nano \ # The text editor that dont need research to exit
+ git \ # git version management
+ terminator \ # An awesome terminal handler to use in i3
+ xterm \ # Fallback terminal
+ leafpad \ # Great notepad, minimalistic
  chromium \
- thunar \
- thunar-volman \
- atom \
- pulseaudio \
- pulseaudio-alsa \
+ thunar thunar-volman \ # File manager, good stuff
+ atom \ # Hackable code editor
+ pulseaudio pulseaudio-alsa \ # Audio stuff
  firefox \
  wget \
  docker
