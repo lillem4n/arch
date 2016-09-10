@@ -29,7 +29,7 @@ mount /dev/sda1 /mnt/boot/efi
 pacstrap /mnt \
  base base-devel \ # Base packages for Arch
  grub-efi-x86_64 efibootmgr \ # UEFI stuff
- dialog \ # Unknown
+ dialog \ # A tool to display dialog boxes from shell scripts
  wpa_supplicant \ # Needed for wifi-menu to work with WPA wireless networks
  xorg xorg-xinit \ # Xorg (X11)
  i3 i3lock i3status \ # i3 Window Manager
