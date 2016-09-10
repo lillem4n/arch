@@ -47,7 +47,8 @@ pacstrap /mnt \
  pulseaudio pulseaudio-alsa \ # Audio stuff
  firefox \
  wget \
- docker
+ docker \ # Containerization software
+ ttf-dejavu # True type fonts (only very basic low res bitmap fonts are installed by default)
 # networkmanager \
 # networkmanager-openvpn \
 # network-manager-applet
