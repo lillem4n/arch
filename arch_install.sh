@@ -48,7 +48,8 @@ pacstrap /mnt \
  firefox \
  wget \
  docker \ # Containerization software
- ttf-dejavu # True type fonts (only very basic low res bitmap fonts are installed by default)
+ ttf-dejavu \ # True type fonts (only very basic low res bitmap fonts are installed by default)
+ ntp # Network Time Protocol - for syncronizing the clock
 # networkmanager \
 # networkmanager-openvpn \
 # network-manager-applet
