@@ -3,7 +3,7 @@
 # Setup wifi, not needed if DHCP ethernet is present
 #wifi-menu
 
-# Disk partition
+# Disk partition - disk must be set to GPT and not MBR
 #cgdisk /dev/sda
 #1 100M EFI partition # Hex code ef00
 #2 250M Boot partition # Hex code 8300
