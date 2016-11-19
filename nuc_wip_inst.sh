@@ -140,12 +140,14 @@ echo "ExecStart=-/usr/bin/agetty --autologin lilleman --noclear %I $TERM" >> /et
 
 # Make sure networking is started and set up DHCP on wired interface
 systemctl enable systemd-networkd
+systemctl enable systemd-resolved
 echo "[Match]" > /etc/systemd/network/eno1.network
 echo "Name=eno1" >> /etc/systemd/network/eno1.network
 echo "" >> /etc/systemd/network/eno1.network
 echo "[Network]" >> /etc/systemd/network/eno1.network
 echo "DHCP=ipv4" >> /etc/systemd/network/eno1.network
-
+rm /etc/resolv.conf
+ln -s /run/systemd/resolve/resolv.conf /etc/resolv.conf
 
 # Exit chroot env
 exit
