@@ -138,6 +138,15 @@ echo "[Service]" >> /etc/systemd/system/getty@tty1.service.d/override.conf
 echo "ExecStart=" >> /etc/systemd/system/getty@tty1.service.d/override.conf
 echo "ExecStart=-/usr/bin/agetty --autologin lilleman --noclear %I $TERM" >> /etc/systemd/system/getty@tty1.service.d/override.conf
 
+# Make sure networking is started and set up DHCP on wired interface
+systemctl enable systemd-networkd
+echo "[Match]" > /etc/systemd/network/eno1.network
+echo "Name=eno1" >> /etc/systemd/network/eno1.network
+echo "" >> /etc/systemd/network/eno1.network
+echo "[Network]" >> /etc/systemd/network/eno1.network
+echo "DHCP=ipv4" >> /etc/systemd/network/eno1.network
+
+
 # Exit chroot env
 exit
 
