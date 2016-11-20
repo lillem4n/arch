@@ -45,7 +45,23 @@ sed -i 's/^#Server/Server/' /etc/pacman.d/mirrorlist.backup
 rankmirrors -n 6 /etc/pacman.d/mirrorlist.backup > /etc/pacman.d/mirrorlist
 
 # Install base system
-pacstrap -i /mnt base base-devel dialog xorg xorg-xinit i3-wm i3status dmenu bash-completion openssh nano xterm leafpad chromium thunar thunar-volman firefox wget ttf-dejavu intel-ucode
+pacstrap -i /mnt \
+  base base-devel \
+  dialog \
+  xorg xorg-xinit \
+  i3-wm i3status \
+  dmenu \
+  bash-completion \
+  openssh \
+  nano \
+  xterm \
+  leafpad \
+  chromium firefox \
+  thunar thunar-volman \
+  wget \
+  ttf-dejavu \
+  intel-ucode \
+  pulseaudio pulseaudio-alsa
 
 # Generate fstab
 genfstab -pU /mnt >> /mnt/etc/fstab
